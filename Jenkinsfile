@@ -8,9 +8,10 @@ pipeline {
         maven 'maven'      // This uses the tool with the name 'maven'
     }
     environment {
-        AWS_ACCESS_KEY = credentials('AWS_KEY')
-        AWS_SECRET_KEY = credentials('AWS_SECRET')
-        SSH_PRIVATE_KEY_PATH = "~/.ssh/mujahed.pem"  // Path to your private key
+      AZURE_CLIENT_ID       = credentials('AZURE_CLIENT_ID')
+      AZURE_CLIENT_SECRET   = credentials('AZURE_CLIENT_SECRET')
+      AZURE_SUBSCRIPTION_ID = credentials('AZURE_SUBSCRIPTION_ID')
+      AZURE_TENANT_ID       = credentials('AZURE_TENANT_ID')
     }
 
     stages {
